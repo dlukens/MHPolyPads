@@ -2,6 +2,7 @@
 from parapy.core import *
 from casing import Casing
 from floor import Floor
+from stiffeners import Stiffener
 
 class World(Base):
 
@@ -15,6 +16,10 @@ class World(Base):
     @Part
     def floor(self):
         return Floor()
+
+    @Part
+    def stiffener(self):
+        return Stiffener()
 
 if __name__ == '__main__':
     from parapy.gui import display
